@@ -24,6 +24,7 @@ jobs:
         run: |
           docker pull docker.io/ajsoni/supermario-gitops:${{ env.VERSION }}
           docker save -o supermario-gitops.tar docker.io/ajsoni/supermario-gitops:${{ env.VERSION }}
+          ls
      
       - name: Run Trivy vulnerability scanner in tarball mode
         uses: aquasecurity/trivy-action@master
